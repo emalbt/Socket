@@ -1,0 +1,1 @@
+/home/pacmanpc/Socket_Rete_pc/build/CMakeFiles/glove_wifi.dir

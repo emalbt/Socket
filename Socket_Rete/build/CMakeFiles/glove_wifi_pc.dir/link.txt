@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/glove_wifi_pc.dir/src/main.cpp.o CMakeFiles/glove_wifi_pc.dir/src/Network.cpp.o CMakeFiles/glove_wifi_pc.dir/src/Network_B.cpp.o  -o glove_wifi_pc -rdynamic -lboost_system -lpthread 

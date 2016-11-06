@@ -1,0 +1,56 @@
+// Wireless communicator - Client part
+
+#include <stdio.h>
+#include <iostream>
+#include <stdlib.h>
+#include <unistd.h>
+#include <errno.h>
+#include <string.h>
+#include <netdb.h>
+#include <sys/types.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <sys/wait.h>
+#include <signal.h>
+#include <sys/time.h>
+
+
+#define sign(X) (X>=0.0)?48:49
+
+#define PORT 3490     // the port client will be connecting to
+#define BACKLOG 10      // how many pending connections queue will hold
+#define MAXDATASIZE 100 // max number of bytes we can get at once
+
+using namespace std;
+
+static int sockfd;  // listen on sock_fd, new connection on new_fd
+static int numbytes;
+extern char buf[MAXDATASIZE];
+static sockaddr_in other;
+static socklen_t len;
+extern short int cmd;
+extern short int accX, accY, accZ;
+extern short int button;
+extern short int posX, posY, posZ;
+extern double robot_stiffness;
+extern int send_img;
+extern int increase_kvib;
+extern short int ref0, ref1;
+extern bool dft321;
+extern bool connected;
+extern bool connected_main;
+extern bool stop_flag;
+extern bool send_info_flag;
+extern bool change_motor_ref;
+
+int initialize_connection(char*);
+void close_connection();
+void close_network();
+
+void receive_data();
+void send_data(char*);
+void create_packet(char*, double*);
+void create_packet_imu(char* str, double* val);
+bool receive_packet();
+bool wifi_event()

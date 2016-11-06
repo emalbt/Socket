@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/glove_wifi.dir/src/main.cpp.o CMakeFiles/glove_wifi.dir/src/qbmove_communications.cpp.o CMakeFiles/glove_wifi.dir/src/imuboard_communications.cpp.o CMakeFiles/glove_wifi.dir/src/wireless_communicator.cpp.o  -o glove_wifi -rdynamic -lboost_system -lpthread 

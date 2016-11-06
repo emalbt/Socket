@@ -1,0 +1,1 @@
+/home/pi/Desktop/Socket_Rete/build/CMakeFiles/glove_wifi.dir
